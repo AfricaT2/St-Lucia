@@ -89,6 +89,35 @@
         .button:hover {
             background: #01579b;
         }
+        .form-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        .form-section h2 {
+            color: #0288d1;
+            text-align: center;
+        }
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-section input, .form-section textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .form-section input[type="submit"] {
+            background: #0288d1;
+            color: #fff;
+            cursor: pointer;
+        }
+        .form-section input[type="submit"]:hover {
+            background: #01579b;
+        }
     </style>
 </head>
 <body>
@@ -121,9 +150,19 @@
                 <img src="https://i.imgur.com/N9M8TqV.jpeg" alt="Nightlife">
             </div>
         </div>
+        <div class="form-section">
+            <h2>Contact Us</h2>
+            <form action="send_email.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Your Phone Number" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
         <div class="contact">
             <p>Contact Details: <strong>Africa 0814923012</strong></p>
         </div>
     </div>
 </body>
-</html> 
+</html>
